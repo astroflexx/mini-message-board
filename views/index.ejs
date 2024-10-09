@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All messages</title>
+  </head>
+  <body>
+    <h1>All messages!</h1>
+    <% messages.map((message) => { %>
+    <div>
+      <p><%= message.user %></p>
+      <p><%= message.added %></p>
+      <a href="/message/<%= message.id %>">Open message</a>
+    </div>
+    <% }); %>
+    <a href="/new">New message</a>
+  </body>
+</html>
